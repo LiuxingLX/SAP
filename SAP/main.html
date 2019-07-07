@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
+  <!-- <link rel='stylesheet' href='src/css/main_css.css'> -->
+  <!-- <link rel='stylesheet' href='src/css/bootstrap-select.min.css'> -->
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="src/js/highcharts.js"></script>
+  <script type="text/javascript" src="src/js/vue.min.js"></script>
+  <script src="src/js/main_func.js"></script>
+  <!-- <script src="src/js/dcalendar.picker.js"></script> -->
+  <!-- <script src="src/js/web_view.js"></script> -->
+  <title>MyPage</title>
+</head>
+
+<body>
+  <div style="width:1000px;" class="center-block">
+    <div id="container" style="max-width:1000px;height:400px"></div>
+    <div class="center-block">
+      <button type="button" class="center-block btn btn-primary" onclick="saveData();">保存当前数据</button>
+    </div>
+    <br>
+    <table id="tb2" style="max-width:1000px;height:400px" class="table">
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+  //图表属性
+    var oOptions = {
+      chart: {
+        renderTo: 'container',
+        type: 'column'
+      },
+      title: {
+        text: '图表'
+      },
+      xAxis: {
+        title: {
+          text: 'X 轴'
+        },
+        categories: ['data1', 'data2', 'data3']
+      },
+      yAxis: {
+        title: {
+          text: 'Y 轴'
+        }
+      },
+      series: [{
+        name:'随机数',
+        data:[mRandom(1,100),mRandom(1,100),mRandom(1,100)]
+      }]
+    };
+  </script>
+
+  <script>
+    //数据设置
+    var container = new Vue({
+      el: "#container",
+      data: {},
+      created: function() {
+        oChart = new Highcharts.Chart(oOptions);
+        // this.SetData();
+      },
+      methods: {
+        SetData: function(dataArray) {
+          var self = this;
+          var reqParams = {
+          };
+          var oSeries = {
+            name: "随机数据",
+            data: dataArray
+          };
+          oChart.series[0].setData(dataArray);
+          // oChart.addSeries(oSeries);
+        },
+      }
+    });
+
+    $(document).ready(function() {
+      getsrc();
+      fetchData();
+      window.setInterval("changeData()",5000);
+    });
+  </script>
+  <script src="src/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+
+</html>

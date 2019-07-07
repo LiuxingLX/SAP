@@ -1,0 +1,692 @@
+@font-face {
+ font-family: 'AdientSans-Regular_0';
+ src: url('../../src/font/AdientSans-Regular_0.eot?#iefix') format('embedded-opentype');
+}
+.clear{
+  clear: both;
+}
+/* body{
+  background-color: rgba(235,235,235,1);
+} */
+a { text-decoration: none; cursor: pointer; color:#333333; font-size:14px;}
+a:hover { text-decoration: none; }
+.clearfix::after{ display:block; content:''; height:0; overflow:hidden; clear:both;}
+/*星星样式*/
+.content{ width:600px; margin:0 auto; padding-top:20px;}
+.title{ font-size:14px; background:#dfdfdf; padding:10px; margin-bottom:10px;}
+.block{ float:left; margin:0 0 0 0; padding-top:10px; padding-left:0px; line-height:21px;}
+.block .star_score{ float:left;}
+.star_list{height:21px;margin:50px; line-height:21px;}
+.block p,.block .attitude{ padding-left:20px; line-height:21px; display:inline-block;}
+.block p span{ color:#C00; font-size:16px; font-family:Georgia, "Times New Roman", Times, serif;}
+.star_score { background:url(../../src/png/stark2.png); width:160px; height:21px;  position:relative; }
+.star_score a{ height:21px; display:block; text-indent:-999em; position:absolute;left:0;border-width: 0px;}
+.star_score a:hover{ background:url(../../src/png/stars2.png);left:0;}
+.star_score a.clibg{ background:url(../../src/png/stars2.png);left:0;}
+#starttwo .star_score { background:url(../../src/png/starky.png);}
+#starttwo .star_score a:hover{ background:url(../../src/png/starsy.png);left:0;}
+#starttwo .star_score a.clibg{ background:url(../../src/png/starsy.png);left:0;}
+/*星星样式*/
+.show_number{ padding-left:0px; padding-top:0px;display: block;float: left;}
+.show_number li{ width:200px; border:0px solid #ccc; padding:5px; margin-left:70px; margin-bottom:20px;}
+.atar_Show{background:url(../../src/png/stark2.png); width:160px; height:21px;  position:relative; float:left; }
+.atar_Show p{ background:url(../../src/png/stars2.png);left:0; height:21px; width:134px;}
+.show_number li span{ display:inline-block; line-height:21px;}
+
+/* 整体设置 */
+/* *{margin:0px;padding:0px;font-family: AdientSans-Regular_0,"Microsoft Yahei";} */
+/* html{
+  background-color: rgb(235,235,235);
+} */
+.myLOGO{
+}
+.myfooter{
+  display: block;
+  float: left;
+  background: url('../../src/png/background.jpg');
+  height: 80px;
+  width: auto;
+}
+img{
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+}
+.Header{
+  height: 50px;
+  width: auto;
+  overflow: hidden;
+}
+
+.alldiv{
+  width: 1800px;
+  height: 1220px;
+  margin:auto;
+  margin-right: auto;
+  position: relative;
+}
+.biaotou-div{
+  display: block;
+  float: left;
+  padding-top: 59px;
+  width: 45px;
+  height: auto;
+}
+.biaotou{
+  background-color: rgba(222,59,33,.7);
+  border-collapse: collapse;
+  display: block;
+  float: left;
+  width: 45px;
+  margin-top: 18px;
+  line-height: 19.15px;
+  border-width: 0;
+  border-style: none;
+}
+.biaotou tbody{
+  width: 45px;
+  border-right: 0px;
+}
+.biaotou tr{
+  border-collapse: collapse;
+  border-width: 0;
+  border-style: solid;
+  width: 45px;
+}
+.biaotou td{
+  border-collapse: collapse;
+  /* color: white; */
+  border-color: black;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-right: 0px;
+  border-style: solid;
+  width: 45px;
+}
+/**
+ * 设置日历的大小
+ */
+.calendar{
+  width: 840px;
+  height: 400px;
+  display: block;
+  float: left;
+}
+.Taskcalendar .calendar{
+  width: 100%;
+  display: block;
+  float: left;
+}
+
+/**
+ * 设置日历顶部盒子
+ */
+.calendar .calendar-title-box{
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align:center;
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ * 设置上个月的按钮图标
+ */
+.calendar .prev-month{
+  color: white;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 0px;
+  border-top: 6px solid transparent;
+  border-right: 8px solid white;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+}
+th .prev-month {
+  color: black;
+  position: relative;
+  top: 0px;
+  left: -10px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 0px;
+  border-top: 6px solid transparent;
+  border-right: 8px solid black;
+  border-bottom: 6px solid transparent;
+  cursor:alias;
+}
+
+/**
+ * 设置下个月的按钮图标
+ */
+.calendar .next-month {
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-right: 0px;
+  border-top: 6px solid transparent;
+  border-left: 8px solid white;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+}
+th .next-month {
+  color: black;
+  position: relative;
+  top: 0px;
+  right: -10px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-right: 0px;
+  border-top: 6px solid transparent;
+  border-left: 8px solid black;
+  border-bottom: 6px solid transparent;
+  cursor: alias;
+}
+
+/* 设置日历表格样式 */
+.calendar-table{
+  width: 100%;
+  border-collapse: collapse;
+  text-align:center;
+}
+
+/* 表格行高 */
+.calendar-table tr{
+  height: 15px;
+  line-height: 15px;
+  width: 100%
+}
+
+.calendar-table th{
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+}
+
+.calendar-table td{
+  height: 20px;
+}
+
+.wholeday td:hover{
+  /* background: pink; */
+}
+.taskcell:hover{
+  background-color: white;
+  color: rgba(0,70,91,1);
+  cursor: pointer;
+}
+
+/* 当前天 颜色特殊显示 */
+.currentDay {
+  background-color: rgba(196,216,13,0.7);
+  width: 14.28%;
+  color: red;
+  width: 100%;
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+/* 本月 文字颜色 */
+.currentMonth {
+  color: rgba(12,46,134,1);
+  background-color: rgba(196,216,13,0.7);
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+/* 其他月颜色 */
+.otherMonth{
+  color: rgb(135,135,133);
+  background-color: rgba(131, 135, 136, 0.1);
+  text-align: center;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.AddNewBox{
+  /* background-color: grey; */
+  width: 2100px;
+  height: 1220px;
+  margin:auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.TaskDetails{
+  background-color: rgb(235,235,235);
+  /* border: 1px; */
+  box-shadow: 5 5 10px rgb(0,0,0);
+  width: 400px;
+  height: 100%;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px;
+}
+
+.cardStr{
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.cardSpan{
+  display: block;
+  float: left;
+  position: relative;
+  margin-left: 80px;
+  width: auto;
+  /* width: 100%; */
+}
+
+
+.welcom_logo{
+  font-size: 15px;
+  border-width:  0px 0px 1px 0px;
+  border-style: solid;
+  width: 170px;
+}
+
+/* a{
+  font-size: 15px;
+  color: rgba(0,70,91,1);
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+} */
+.navigator_div{
+  display: block;
+  overflow: hidden;
+  width: 1920px;
+  height:42px;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  background-color: lightgrey;
+  border-bottom-color: grey;
+  border-left-style: solid;
+  border-left-color: rgba(0,70,91,1);
+  border-left-width: 15px;
+  margin-bottom: 20px;
+  margin-top :20px;
+}
+.nav_menu{
+  border-collapse:collapse;
+  border-spacing:0px;
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  position: relative;
+  cursor:pointer;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+.nave_menu_selected{
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  position: relative;
+  cursor:pointer;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  background: rgba(0,70,91,1);
+  color: white;
+  font-weight: bold;
+  border: 2px;
+  border-radius: 5px;
+  border-style : dashed;
+  border-color: grey;
+}
+.nave_menu_selected::before{
+  /* content: '>'; */
+}
+.nav_menu:hover{
+  background: rgba(0,70,91,1);
+  color: white;
+  box-sizing: border-box;
+  border: 2px;
+  border-radius: 5px;
+  border-style : dashed;
+  border-color: grey;
+}
+
+.Namebox{
+  background: rgba(191,215,50,1);
+  box-shadow: 3 3 10px rgb(0,0,0);
+  border-style: dashed;
+  border-width: 1px;
+  border: 1;
+  width:15%;
+  height:100%;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px;
+}
+.Namecard{
+  display: block;
+  background: rgba(180,150,105,1);
+  border-style: dashed;
+  border-width: 1px;
+  border: 1;
+  width:300px;
+  height:100%;
+  float: left;
+  margin-right: 15px;
+  border-radius: 15px;
+  box-shadow: 5 5 10px rgb(0,0,0);
+}
+.Taskcalendar{
+  float: left;
+  background-color: rgba(0,70,91,1);
+  box-shadow: 5 5 10px rgb(0,0,0);
+  width: 840px;
+  height: 100%;
+  margin-right: 15px;
+  border-radius: 15px;
+  border:1px;
+  border-style: solid;
+  border-color: black;
+  border-collapse: collapse;
+}
+.nametable{
+  width:100%;
+  line-height: 25px;
+  text-align: center;
+  border-collapse: collapse;
+}
+.nametable th{
+  text-align: center;
+}
+.nametable td{
+  border-top: 1px;
+  border-bottom: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.nametable tr:hover{
+  background: rgba(0,70,91,1);
+  color: white;
+  cursor:pointer;
+  text-align: center;
+}
+.nametable tr.td_Chosen{
+  background: rgba(0,70,91,1);
+  color: white;
+}
+.nametable table{
+  border: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+.nametable table tr{
+  border: 0;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.nametable table td{
+  width: 30%;
+  border: 0;
+}
+.taskcell{
+  width: 100%;
+  color: white ;
+  overflow:hidden;
+  white-space: nowrap;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.taskcell.yfGreen{
+  color: rgb(196,216,13);
+}
+.taskcell.yfGreen:hover{
+  color:rgba(0,70,91,1);
+}
+.wholeday{
+  width: 14.28%;
+}
+
+.wholeday>table{
+  width: 100%;
+  table-layout:fixed;
+}
+
+.wholeday-table-td{
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 20px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.cardPhoto{
+  float: left;
+  margin-top: 50px;
+  margin-left: 100px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  /* background-color: lightblue; */
+  display: block;
+}
+
+.cardDetails{
+  /* display: block; */
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  width: 280px;
+  height: 200px;
+  background-color: rgba(255,255,255,.4);
+  display: block;
+    /* overflow: scroll; */
+}
+
+.taskc_btn{
+  margin: 20px 0px 0px 120px;
+  /* margin-top: 50px; */
+  width: 150px;
+  height: 80px;
+  font-size: 50px;
+}
+
+.me-all-tasks{
+  display: block;
+  position: relative;
+  /* float: left; */
+  width: 1700px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.task-selector{
+  display: block;
+  float:left;
+  width: 400px;
+  margin-left: 70px;
+  border-width: 0 5px 0 0;
+  border-style: solid;
+  border-color: rgb(12,46,134);
+  height: 100%;
+}
+.task-fillter{
+  width:100px;
+  height: 20px;
+}
+#task-search{
+  height: 40px;
+  font-size: 15px;
+  margin-left: 20px;
+  border-color: lightgrey;
+  border-width: 0px;
+  border-radius: 3px;
+}
+#task-search:focus{
+  box-shadow: 0 0 5px rgba(196,216,13,1);
+  /* padding:10px */
+}
+.task-box{
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px;
+  border-radius: 15px;
+  border-style: solid;
+  background-color: rgba(135,135,133,.1);
+  cursor: pointer;
+}
+.task-box:hover{
+  box-shadow: 2px 2px 5px black;
+}
+
+.task-box.selected{
+  box-shadow: 2px 2px 5px black;
+  margin-left: 50px;
+  background-color: rgba(135,135,133,.3)
+}
+
+.me-TaskName{
+  height: 25px;
+  line-height: 25px;
+  margin-top: 1px;
+  margin-left: 0px;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  /* position: relative; */
+}
+.status-logo{
+  position: relative;
+  float: left;
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+}
+.status-logo.complete{
+  background:url(../../src/png/complete.png);
+  background-size: cover;
+  /* content: url(../../src/png/footer.png); */
+}
+.status-logo.uncomplete{
+  background:url(../../src/png/not-complete.png);
+  background-size: cover;
+}
+.status-logo.unsurvey{
+  background:url(../../src/png/unsurvey.png);
+  background-size: cover;
+}
+.me-start-time{
+  margin: 7px 0 0 0;
+}
+.me-end-time{
+  margin: 0 0 0 0;
+}
+.me-start-time,.me-end-time,.me-exeby{
+  position: relative;
+  float: left;
+  width: auto;
+  height: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.me-start-time::before{
+  content: '开始时间：';
+  color: rgb(0,70,91);
+  font-weight: bold;
+}
+.me-end-time::before{
+  content: '截至时间：';
+  color: rgb(0,70,91);
+  font-weight: bold;
+}
+.me-exeby::before{
+  content: '执行者：';
+  color: rgb(0,70,91);
+  font-weight: bold;
+}
+
+.tasks-show{
+  /* display: block; */
+  position: relative;
+  width: 460px;
+  margin-left: 100px;
+  /* height: 100%; */
+  float: left;
+}
+.tasks-show.sfixed{
+  /* display: block; */
+  position: fixed;
+  left: 500px;
+  top: 10px;
+  width: 450px;
+  margin-left: 100px;
+  /* height: 100%; */
+  float: left;
+}
+
+.btnrow {
+  width: inherit;
+  margin: 10px 0px 10px;
+}
+
+
+.mtfooter{
+  background:url(../../src/png/footer.png);
+  background-size:contain;
+  margin: 20px;
+  display: block;
+  position: relative;
+  width: 1990px;
+  height: 100px;
+}
